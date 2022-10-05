@@ -1,5 +1,5 @@
 {% set name = "metadata-inspector" %}
-{% set version = "2022.10.2" %}
+{% set version = "2022.10.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/metadata_inspector-{{ version }}.tar.gz
-  sha256: d9f8a8af79e103d76c072c59411b488cb0652b694f8afc1d0076cda1120f17b1
+  sha256: 4ee21e3e4dc694aa6609bd47f81b1913dae21102c60176cc8a3fedc49552e172
 
 build:
   entry_points:
@@ -19,14 +19,14 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python >=3.7
   run:
     - cftime
     - dask-core
     - h5netcdf
     - hurry.filesize
     - netcdf4
-    - python >=3.8
+    - python >=3.7
     - cfgrib
     - requests
     - xarray
