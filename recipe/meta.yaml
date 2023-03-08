@@ -1,5 +1,5 @@
 {% set name = "metadata-inspector" %}
-{% set version = "2022.11.1" %}
+{% set version = "2023.3.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/metadata_inspector-{{ version }}.tar.gz
-  sha256: 89ac5b1ef29bcbd6d42c4e3658f3a035a72b23ce48c367a49c92073d0757658d
+  sha256: 459e593435eed9c928531313500f1f03f9fb4a98e1998e4480858e55562775a2
 
 build:
   entry_points:
