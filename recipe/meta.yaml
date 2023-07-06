@@ -1,5 +1,6 @@
 {% set name = "metadata-inspector" %}
-{% set version = "2023.3.7" %}
+{% set version = "2023.7.6" %}
+
 
 package:
   name: {{ name|lower }}
@@ -7,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/metadata_inspector-{{ version }}.tar.gz
-  sha256: 459e593435eed9c928531313500f1f03f9fb4a98e1998e4480858e55562775a2
+  sha256: e7d3edf7373fa3145ebf5b78e8beff2db4ed96b8f202fc43484cf6bcc96cff76
 
 build:
   entry_points:
@@ -26,9 +27,8 @@ requirements:
     - h5netcdf
     - hurry.filesize
     - netcdf4
-    - numpy
+    - numpy >=1.20.3
     - python >=3.7
-    - pyyaml
     - cfgrib
     - requests
     - xarray
@@ -44,9 +44,9 @@ test:
     - pip
 
 about:
-  home: https://gitlab.dkrz.de/freva/metadata-inspektor.git
+  home: https://github.com/FREVA-CLINT/metadata-inspektor.git
   summary: Inspect metadata of weather/climate datasets
-  dev_url: https://gitlab.dkrz.de/freva/metadata-inspektor
+  dev_url: https://github.com/FREVA-CLINT/metadata-inspektor
   license: BSD-3-Clause
   license_file:
     - LICENSE
