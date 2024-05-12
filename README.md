@@ -3,13 +3,13 @@ About metadata-inspector-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/metadata-inspector-feedstock/blob/main/LICENSE.txt)
 
-Home: https://gitlab.dkrz.de/freva/metadata-inspektor.git
+Home: https://github.com/FREVA-CLINT/metadata-inspektor.git
 
 Package license: BSD-3-Clause
 
 Summary: Inspect metadata of weather/climate datasets
 
-Development: https://gitlab.dkrz.de/freva/metadata-inspektor
+Development: https://github.com/FREVA-CLINT/metadata-inspektor
 
 Current build status
 ====================
