@@ -1,5 +1,5 @@
 {% set name = "metadata-inspector" %}
-{% set version = "2023.7.6" %}
+{% set version = "2024.10.15" %}
 
 
 package:
@@ -7,32 +7,34 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/metadata_inspector-{{ version }}.tar.gz
-  sha256: e7d3edf7373fa3145ebf5b78e8beff2db4ed96b8f202fc43484cf6bcc96cff76
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/metadata_inspector-{{ version }}.tar.gz
+  sha256: a99d6a1dc195a1afe20463f5f98b5fb5831227f182d84156cb48494f68ecc8f1
 
 build:
   entry_points:
     - metadata-inspector = metadata_inspector:cli
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
   host:
-    - pip
     - python >=3.7
+    - pip
+    - setuptools
   run:
+    - python >=3.7
     - cftime
+    - cfgrib
     - dask-core
-    - h5netcdf
     - hurry.filesize
+    - h5netcdf
     - netcdf4
     - numpy >=1.20.3
-    - python >=3.7
-    - cfgrib
     - requests
     - xarray
     - zarr
+    - aiohttp
 
 test:
   imports:
@@ -48,8 +50,7 @@ about:
   summary: Inspect metadata of weather/climate datasets
   dev_url: https://github.com/FREVA-CLINT/metadata-inspektor
   license: BSD-3-Clause
-  license_file:
-    - LICENSE
+  license_file: LICENSE
 
 extra:
   recipe-maintainers:
