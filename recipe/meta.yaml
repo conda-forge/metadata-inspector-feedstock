@@ -29,6 +29,7 @@ requirements:
     - netcdf4
     - numpy >=1.20.3
     - requests
+    - setuptools
     - xarray
     - zarr
     - aiohttp
