@@ -12,15 +12,15 @@ build:
     - metadata-inspector = metadata_inspector:cli
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - cftime
     - cfgrib
     - dask-core
@@ -42,6 +42,7 @@ test:
     - metadata-inspector --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/FREVA-CLINT/metadata-inspektor.git
