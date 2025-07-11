@@ -1,18 +1,18 @@
 {% set name = "metadata-inspector" %}
-{% set version = "2024.10.15" %}
+{% set version = "2025.7.11" %}
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/metadata_inspector-{{ version }}.tar.gz
-  sha256: a99d6a1dc195a1afe20463f5f98b5fb5831227f182d84156cb48494f68ecc8f1
+  sha256: a7ccb8ddf2f38b3a05ece030f5668b040c69080d0fdb6494b2a03e42e0a584aa
 build:
   entry_points:
     - metadata-inspector = metadata_inspector:cli
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
